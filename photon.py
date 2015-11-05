@@ -23,6 +23,7 @@ G = (6.674)*(10**(-11))  # Gravitational Constant
 c = 299792458  # Speed of light
 rS = (2*G*mass)/(c*c)  #Schwarzschild radius
 
+
 u0 = rS/r0
 
 phi1 = phi0 + h
@@ -33,18 +34,21 @@ phiList = [phi0, phi1]
 uList = [u0, u1]
 rList = [r0, r1]
 
-while (phi1 < phi0+(2*math.pi)):
+u2=1  # Initialize to a non-negative value to begin the loop
+   
+while ((phi1 < phi0+(2*math.pi)) and (rS/u2 >= 0)):
     
     u2 = (2+((h**2)*(((3/2)*u1)-1)))*u1-u0
+    
+    if (rS/u2 >= 0):
+        uList.append(u2)
 
-    uList.append(u2)
+        u0 = u1
+        u1 = u2
+        phi1 += h 
 
-    u0 = u1
-    u1 = u2
-    phi1 += h 
-
-    phiList.append(phi1)
-    rList.append(rS / u2)
+        phiList.append(phi1)
+        rList.append(rS / u2)
 
 
 

@@ -56,6 +56,3 @@ pyplot.axes(polar = True)
 pyplot.plot(phiList, rList)
 pyplot.show()
 
-print(phi0)
-print(mass)
-print(rS)

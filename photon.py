@@ -36,7 +36,7 @@ rList = [r0, r1]
 
 u2=1  # Initialize to a non-negative value to begin the loop
    
-while ((phi1 < phi0+(2*math.pi)) and (rS/u2 >= 0)):
+while ((phi1 < phi0+(12*math.pi)) and (rS/u2 >= 0)):
     
     u2 = (2+((h**2)*(((3/2)*u1)-1)))*u1-u0
     

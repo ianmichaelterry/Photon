@@ -9,14 +9,12 @@ mass = float(input("(Please use scientific notation, i.e. (1.989)*(10**30) ) "))
 
 phi0 = float(input("\nEnter phi0, the initial angle from the X axis, in radians: "))
 
-r0 = float(input("\nEnter, r0 the photon's distance from the center of the orbited body: "))
+r0 = float(input("\nEnter, r0 the photon's distance from the center of the orbited body, in meters: "))
 
 
 h = float(input("\nEnter h, the change in angle for the first calculation: "))
 
-
-print("\nEnter dr, the change in radius for the first calculation:") 
-dr = float(input("(Please enter it as in terms of the Schwarzschild radius, i.e. 0.01, -0.001, or 0) "))
+dr = float(input("Enter dr, the change in radius for the first calculation, in meters""))
 
 
 G = (6.674)*(10**(-11))  # Gravitational Constant
